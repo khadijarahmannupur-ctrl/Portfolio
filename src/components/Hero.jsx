@@ -147,22 +147,24 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-4">
 
-              {/* CONTACT BUTTON */}
+              {/* RESUME BUTTON */}
               <motion.a
-                href="#contact"
+                href="https://docs.google.com/document/d/1URM0oNOCwH2-_xYRD9a6izlvlmaN-moQdoENOiSleYM/view"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ x: 8 }}
                 className="primary-btn px-8 md:px-10 py-4 md:py-5 rounded-full shadow-lg font-display text-body-sm"
               >
-                Contact Me
+                Resume
               </motion.a>
 
-              {/* PROJECT BUTTON */}
+              {/* CONTACT BUTTON */}
               <motion.a
-                href="#projects"
+                href="#contact"
                 whileHover={{ scale: 1.05 }}
                 className="secondary-btn px-8 md:px-10 py-4 md:py-5 rounded-full font-display text-body-sm hover:bg-sage-dark hover:text-white transition-all"
               >
-                View Projects
+                Let's Talk
               </motion.a>
 
             </div>

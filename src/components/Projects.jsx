@@ -20,43 +20,102 @@ export default function Projects() {
   const projects = [
     {
       number: "01",
-      title: "Lunexa",
-      category: "Modern Learning Platform",
+
+      title: "TileCraft",
+
+      category: "Modern Tile Showcase Website",
+
       description:
-        "An elegant online learning experience focused on immersive UI, responsive layouts and smooth frontend interactions.",
-      tech: ["React", "Tailwind", "MongoDB"],
-      image: "/images/project-1.jpg",
-      live: "#",
+        "TileCraft Gallery showcases premium tiles through a clean, modern and user-friendly browsing experience with secure authentication and personalized features.",
+
+      tech: [
+        "Next.js (App Router)",
+        "Tailwind CSS",
+        "HeroUI",
+        "Better Auth",
+        "MongoDB",
+        "React Fast Marquee",
+      ],
+
+      image: "/project-1.png",
+
+      live: "https://tilecraft-gallery.vercel.app",
+
+      github:
+        "https://github.com/khadijarahmannupur-ctrl/assienment-8",
     },
+
     {
       number: "02",
-      title: "Veloura",
-      category: "Luxury Fashion Store",
+
+      title: "KeenKeeper Friends",
+
+      category: "Friends Care & Community Platform",
+
       description:
-        "Premium ecommerce experience with cinematic layouts, modern typography and high-end visual storytelling.",
-      tech: ["Next.js", "GSAP", "Framer"],
+        "KeenKeeper is a modern friendship management platform that helps users stay connected by tracking calls, messages and meaningful interactions.",
+
+      tech: [
+        "React.js",
+        "React Router",
+        "Tailwind CSS",
+        "Recharts",
+        "React Toastify",
+      ],
+
       image: "/images/project-2.jpg",
-      live: "#",
+
+      live: "https://keenkepper-friends-website.vercel.app",
+
+      github:
+        "https://github.com/khadijarahmannupur-ctrl/Assienment-7",
     },
+
     {
       number: "03",
-      title: "Orbit Flow",
-      category: "Productivity Dashboard",
+
+      title: "DGI Tools",
+
+      category: "Developer Utility Toolkit",
+
       description:
-        "A modern workflow dashboard crafted with clean user experience, intuitive layouts and scalable architecture.",
-      tech: ["React", "Firebase", "Tailwind"],
+        "A practical collection of modern developer tools built with a minimal interface, fast interactions and productivity-focused user experience.",
+
+      tech: [
+        "React.js",
+        "Tailwind CSS",
+        "Vite",
+        "React Toastify",
+        "React Icons",
+        "Netlify (Deployment)",
+      ],
+
       image: "/images/project-3.jpg",
-      live: "#",
+
+      live: "https://dgitools.netlify.app",
+
+      github:
+        "https://github.com/khadijarahmannupur-ctrl/Assienment-6",
     },
+
     {
       number: "04",
-      title: "Noir Atelier",
-      category: "Creative Portfolio",
+
+      title: "GitHub Issues Tracer",
+
+      category: "Issue Tracking Dashboard",
+
       description:
-        "Minimal portfolio experience inspired by editorial aesthetics, refined interactions and luxury visuals.",
-      tech: ["Next.js", "GSAP", "Tailwind"],
+        "A streamlined GitHub issue management platform crafted for tracking repository tasks, monitoring workflows and improving development collaboration.",
+
+      tech: ["React", "GitHub API", "Tailwind CSS", "JavaScript"],
+
       image: "/images/project-4.jpg",
-      live: "#",
+
+      live: "https://github-issues-tracer.netlify.app",
+
+      github:
+        "https://github.com/khadijarahmannupur-ctrl/Assienment-5",
     },
   ];
 
@@ -163,7 +222,7 @@ export default function Projects() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-[260px] sm:h-[340px] md:h-[420px] object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                  className="w-full h-[260px] sm:h-[340px] md:h-[460px] object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
@@ -200,13 +259,59 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <motion.a
-                  href={project.live}
-                  whileHover={{ rotate: 45 }}
-                  className="material-symbols-outlined text-3xl text-sage-dark inline-block"
-                >
-                  arrow_outward
-                </motion.a>
+                {/* BUTTONS */}
+                <div className="flex flex-wrap items-center gap-4 pt-2">
+
+                  {/* LIVE DEMO BUTTON */}
+                  <motion.a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ y: -2 }}
+                    whileTap={{ scale: 0.96 }}
+                    className="
+                              primary-btn
+                              px-6
+                              py-3
+                              rounded-full
+                              text-[11px]
+                              uppercase
+                              tracking-[0.2em]
+                              font-label-caps
+                              shadow-md
+                              transition-all
+                              duration-300
+                            "
+                  >
+                    Live Demo ↗
+                  </motion.a>
+
+                  {/* GITHUB BUTTON */}
+                  <motion.a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ y: -2 }}
+                    whileTap={{ scale: 0.96 }}
+                    className="
+                          secondary-btn
+                          px-6
+                          py-3
+                          rounded-full
+                          text-[11px]
+                          uppercase
+                          tracking-[0.2em]
+                          font-label-caps
+                          transition-all
+                          duration-300
+                          hover:bg-sage-dark
+                          hover:text-white
+                          "
+                  >
+                    GitHub ↗
+                  </motion.a>
+
+                </div>
 
               </div>
 
