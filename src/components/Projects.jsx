@@ -63,7 +63,7 @@ export default function Projects() {
         "React Toastify",
       ],
 
-      image: "/images/project-2.jpg",
+      image: "/project-2.png",
 
       live: "https://keenkepper-friends-website.vercel.app",
 
@@ -90,7 +90,7 @@ export default function Projects() {
         "Netlify (Deployment)",
       ],
 
-      image: "/images/project-3.jpg",
+      image: "/project-3.png",
 
       live: "https://dgitools.netlify.app",
 
@@ -110,7 +110,7 @@ export default function Projects() {
 
       tech: ["React", "GitHub API", "Tailwind CSS", "JavaScript"],
 
-      image: "/images/project-4.jpg",
+      image: "/project-4.png",
 
       live: "https://github-issues-tracer.netlify.app",
 

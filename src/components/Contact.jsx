@@ -46,11 +46,11 @@ export default function Contact() {
     >
       <div className="contact-item relative overflow-hidden rounded-[3rem] md:rounded-[4rem] bg-sage-dark p-10 md:p-20 grid md:grid-cols-12 gap-12">
 
-        {/* decor */}
+        {/* DECOR */}
         <div className="absolute top-10 right-10 w-24 h-24 border border-white/10 rounded-full opacity-30" />
         <div className="absolute bottom-10 left-10 w-12 h-12 bg-sage-mid/10 blur-xl rounded-full" />
 
-        {/* LEFT */}
+        {/* LEFT SIDE */}
         <div className="md:col-span-5 relative z-10 space-y-6">
 
           <span className="contact-item font-label-caps text-[11px] tracking-[0.4em] text-white/40 uppercase">
@@ -82,35 +82,61 @@ export default function Contact() {
                   location_on
                 </span>
               </span>
-              <span className="text-white">Dhaka,Bangladesh</span>
+              <span className="text-white">Dhaka, Bangladesh</span>
             </div>
 
           </div>
 
         </div>
 
-        {/* RIGHT */}
+        {/* RIGHT SIDE FORM */}
         <div className="md:col-span-7 relative z-10">
 
-          <form className="space-y-6">
+          <form
+            action="https://formsubmit.co/khadijarahmannupur@gmail.com"
+            method="POST"
+            className="space-y-6"
+          >
 
+            {/* SETTINGS (hidden fields) */}
+            <input type="hidden" name="_subject" value="New Portfolio Message" />
+            <input type="hidden" name="_captcha" value="false" />
             <input
+              type="hidden"
+              name="_next"
+              value="https://khadija-rahman-nupur-portfolio.vercel.app"
+            />
+
+            {/* NAME */}
+            <input
+              type="text"
+              name="name"
+              required
               className="contact-item w-full bg-transparent border-b border-white/20 py-3 text-white outline-none"
               placeholder="Name"
             />
 
+            {/* EMAIL */}
             <input
+              type="email"
+              name="email"
+              required
               className="contact-item w-full bg-transparent border-b border-white/20 py-3 text-white outline-none"
               placeholder="Email"
             />
 
+            {/* MESSAGE */}
             <textarea
               rows="5"
+              name="message"
+              required
               className="contact-item w-full bg-transparent border-b border-white/20 py-3 text-white outline-none resize-none"
               placeholder="Message"
             />
 
+            {/* SUBMIT BUTTON */}
             <motion.button
+              type="submit"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               className="contact-item bg-sage-mid text-white px-10 py-4 rounded-full"
