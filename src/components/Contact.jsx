@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { motion } from "framer-motion";
@@ -9,8 +10,20 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Contact() {
 
+  // =========================
+  // REFS
+  // =========================
   const sectionRef = useRef(null);
+  const form = useRef();
 
+  // =========================
+  // SUCCESS MESSAGE
+  // =========================
+  const [result, setResult] = useState("");
+
+  // =========================
+  // GSAP ANIMATION
+  // =========================
   useEffect(() => {
 
     if (!sectionRef.current) return;
@@ -39,12 +52,41 @@ export default function Contact() {
 
     ScrollTrigger.refresh();
 
-    return () => {
-      ctx.revert();
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
+    return () => ctx.revert();
 
   }, []);
+
+  // =========================
+  // EMAIL SEND FUNCTION
+  // =========================
+  const sendEmail = (e) => {
+
+    e.preventDefault();
+
+    setResult("Sending...");
+
+    emailjs
+      .sendForm(
+        "service_mltmmyb",
+        "template_g3xwtvu",
+        form.current,
+        "qVt4fR1cpt_UcoeTl"
+      )
+      .then(
+        () => {
+
+          setResult("Message sent successfully!");
+
+          form.current.reset();
+
+        },
+        () => {
+
+          setResult("Something went wrong!");
+
+        }
+      );
+  };
 
   return (
 
@@ -61,7 +103,7 @@ export default function Contact() {
 
         <div className="absolute bottom-10 left-10 w-12 h-12 bg-sage-mid/10 blur-xl rounded-full" />
 
-        {/* LEFT */}
+        {/* LEFT SIDE */}
         <div className="md:col-span-5 relative z-10 space-y-6">
 
           <span className="contact-item font-label-caps text-[11px] tracking-[0.4em] text-white/40 uppercase">
@@ -118,45 +160,31 @@ export default function Contact() {
 
         </div>
 
-        {/* RIGHT */}
+        {/* RIGHT SIDE */}
         <div className="md:col-span-7 relative z-10">
 
           <form
-            action="https://formsubmit.co/khadijarahmannupur@gmail.com"
-            method="POST"
+            ref={form}
+            onSubmit={sendEmail}
             className="space-y-6"
           >
-
-            {/* Disable captcha */}
-            <input
-              type="hidden"
-              name="_captcha"
-              value="false"
-            />
-
-            {/* Success page */}
-            <input
-              type="hidden"
-              name="_next"
-              value="https://khadija-rahman-nupur-portfolio.vercel.app"
-            />
 
             {/* NAME */}
             <input
               type="text"
-              name="name"
+              name="from_name"
               required
               placeholder="Your Name"
-              className="contact-item w-full bg-transparent border-b border-white/20 py-3 text-white outline-none"
+              className="contact-item w-full bg-transparent border-b border-white/20 py-3 text-white placeholder:text-white/40 outline-none"
             />
 
             {/* EMAIL */}
             <input
               type="email"
-              name="email"
+              name="from_email"
               required
               placeholder="Your Email"
-              className="contact-item w-full bg-transparent border-b border-white/20 py-3 text-white outline-none"
+              className="contact-item w-full bg-transparent border-b border-white/20 py-3 text-white placeholder:text-white/40 outline-none"
             />
 
             {/* MESSAGE */}
@@ -165,7 +193,7 @@ export default function Contact() {
               name="message"
               required
               placeholder="Write your message..."
-              className="contact-item w-full bg-transparent border-b border-white/20 py-3 text-white outline-none resize-none"
+              className="contact-item w-full bg-transparent border-b border-white/20 py-3 text-white placeholder:text-white/40 outline-none resize-none"
             />
 
             {/* BUTTON */}
@@ -177,6 +205,11 @@ export default function Contact() {
             >
               Send Message
             </motion.button>
+
+            {/* RESULT */}
+            <p className="text-white/70 text-sm">
+              {result}
+            </p>
 
           </form>
 
