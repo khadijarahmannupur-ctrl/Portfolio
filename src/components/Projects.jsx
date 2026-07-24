@@ -21,101 +21,81 @@ export default function Projects() {
     {
       number: "01",
 
-      title: "TileCraft",
+      title: "PromptCanvas",
 
-      category: "Modern Tile Showcase Website",
+      category: "AI Prompt Marketplace",
 
       description:
-        "TileCraft Gallery showcases premium tiles through a clean, modern and user-friendly browsing experience with secure authentication and personalized features.",
+        "PromptCanvas is a community-driven platform to create, share and discover high-quality AI prompts for ChatGPT, Gemini, Claude and more, with a creator dashboard and premium unlocks.",
 
       tech: [
-        "Next.js (App Router)",
+        "Next.js",
+        "React",
         "Tailwind CSS",
-        "HeroUI",
         "Better Auth",
+        "Stripe",
         "MongoDB",
-        "React Fast Marquee",
       ],
 
-      image: "/project-1.png",
+      image: "/project-promptcanvas.png",
 
-      live: "https://tilecraft-gallery.vercel.app",
+      live: "https://promptcanvas-client.vercel.app",
 
       github:
-        "https://github.com/khadijarahmannupur-ctrl/assienment-8",
+        "https://github.com/khadijarahmannupur-ctrl/promptcanvas-client",
     },
 
     {
       number: "02",
 
-      title: "KeenKeeper Friends",
+      title: "MediQueue",
 
-      category: "Friends Care & Community Platform",
+      category: "Smart Tutor Booking Platform",
 
       description:
-        "KeenKeeper is a modern friendship management platform that helps users stay connected by tracking calls, messages and meaningful interactions.",
+        "MediQueue helps students connect with verified tutors through organized scheduling, flexible online and offline sessions, and a smooth booking experience.",
 
       tech: [
+        "Next.js",
         "React.js",
-        "React Router",
         "Tailwind CSS",
-        "Recharts",
-        "React Toastify",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
       ],
 
-      image: "/project-2.png",
+      image: "/project-mediqueue.png",
 
-      live: "https://keenkepper-friends-website.vercel.app",
+      live: "https://assignment-9-six.vercel.app",
 
       github:
-        "https://github.com/khadijarahmannupur-ctrl/Assienment-7",
+        "https://github.com/khadijarahmannupur-ctrl/assignment-9",
     },
 
     {
       number: "03",
 
-      title: "DGI Tools",
+      title: "SkillBridge",
 
-      category: "Developer Utility Toolkit",
+      category: "Freelance Service Marketplace",
 
       description:
-        "A practical collection of modern developer tools built with a minimal interface, fast interactions and productivity-focused user experience.",
+        "SkillBridge connects clients with vetted freelance talent across development, design and marketing, built with a secure, modern booking and hiring flow.",
 
       tech: [
-        "React.js",
-        "Tailwind CSS",
-        "Vite",
-        "React Toastify",
-        "React Icons",
-        "Netlify (Deployment)",
+        "Next.js",
+        "TypeScript",
+        "Better Auth",
+        "Express.js",
+        "MongoDB",
       ],
 
-      image: "/project-3.png",
+      image: "/project-skillbridge.png",
 
-      live: "https://dgitools.netlify.app",
-
-      github:
-        "https://github.com/khadijarahmannupur-ctrl/Assienment-6",
-    },
-
-    {
-      number: "04",
-
-      title: "GitHub Issues Tracer",
-
-      category: "Issue Tracking Dashboard",
-
-      description:
-        "A streamlined GitHub issue management platform crafted for tracking repository tasks, monitoring workflows and improving development collaboration.",
-
-      tech: ["React", "GitHub API", "Tailwind CSS", "JavaScript"],
-
-      image: "/project-4.png",
-
-      live: "https://github-issues-tracer.netlify.app",
+      live: "https://type-script-project-client.vercel.app",
 
       github:
-        "https://github.com/khadijarahmannupur-ctrl/Assienment-5",
+        "https://github.com/khadijarahmannupur-ctrl/TypeScript-Project-client",
     },
   ];
 

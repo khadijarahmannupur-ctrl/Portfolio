@@ -10,20 +10,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Contact() {
 
-  // =========================
-  // REFS
-  // =========================
   const sectionRef = useRef(null);
   const form = useRef();
-
-  // =========================
-  // SUCCESS MESSAGE
-  // =========================
   const [result, setResult] = useState("");
 
-  // =========================
-  // GSAP ANIMATION
-  // =========================
   useEffect(() => {
 
     if (!sectionRef.current) return;
@@ -56,9 +46,6 @@ export default function Contact() {
 
   }, []);
 
-  // =========================
-  // EMAIL SEND FUNCTION
-  // =========================
   const sendEmail = (e) => {
 
     e.preventDefault();
@@ -93,15 +80,15 @@ export default function Contact() {
     <section
       ref={sectionRef}
       id="contact"
-      className="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"
+      className="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-x-hidden"
     >
 
-      <div className="contact-item relative overflow-hidden rounded-[3rem] md:rounded-[4rem] bg-sage-dark p-10 md:p-20 grid md:grid-cols-12 gap-12">
+      <div className="contact-item relative overflow-hidden rounded-[3rem] md:rounded-[4rem] bg-sage-dark p-10 md:p-20 grid grid-cols-1 md:grid-cols-12 gap-12">
 
         {/* DECOR */}
-        <div className="absolute top-10 right-10 w-24 h-24 border border-white/10 rounded-full opacity-30" />
+        <div className="absolute top-10 right-10 w-24 h-24 border border-white/10 rounded-full opacity-30 pointer-events-none" />
 
-        <div className="absolute bottom-10 left-10 w-12 h-12 bg-sage-mid/10 blur-xl rounded-full" />
+        <div className="absolute bottom-10 left-10 w-12 h-12 bg-sage-mid/10 blur-xl rounded-full pointer-events-none" />
 
         {/* LEFT SIDE */}
         <div className="md:col-span-5 relative z-10 space-y-6">
@@ -111,7 +98,7 @@ export default function Contact() {
           </span>
 
           <h2 className="contact-item font-display text-[48px] md:text-[72px] text-white leading-tight">
-            Let’s build
+            Let's build
             <br />
             something meaningful
           </h2>
@@ -125,7 +112,7 @@ export default function Contact() {
             {/* EMAIL */}
             <div className="contact-item flex items-center gap-4">
 
-              <span className="w-10 h-10 text-white border border-white rounded-full flex items-center justify-center">
+              <span className="w-10 h-10 shrink-0 text-white border border-white rounded-full flex items-center justify-center">
 
                 <span className="material-symbols-outlined text-sm">
                   alternate_email
@@ -133,7 +120,7 @@ export default function Contact() {
 
               </span>
 
-              <span className="text-white">
+              <span className="text-white break-all">
                 khadijarahmannupur@gmail.com
               </span>
 
@@ -142,16 +129,16 @@ export default function Contact() {
             {/* LOCATION */}
             <div className="contact-item flex items-center gap-4">
 
-              <span className="w-10 h-10 border border-white text-white rounded-full flex items-center justify-center">
+              <span className="w-10 h-10 shrink-0 border border-white text-white rounded-full flex items-center justify-center">
 
                 <span className="material-symbols-outlined text-sm">
-                  location_on
+                  phone
                 </span>
 
               </span>
 
               <span className="text-white">
-                Dhaka, Bangladesh
+                01872313535
               </span>
 
             </div>

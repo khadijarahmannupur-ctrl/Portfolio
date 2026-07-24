@@ -20,24 +20,6 @@ export default function Skills() {
   // =========================
   const skills = [
     {
-      title: "HTML5",
-      icon: "code",
-      desc: "Building semantic, accessible and SEO-friendly website structures.",
-    },
-
-    {
-      title: "CSS3",
-      icon: "brush",
-      desc: "Creating responsive layouts with modern styling and animations.",
-    },
-
-    {
-      title: "JavaScript",
-      icon: "bolt",
-      desc: "Adding interactive functionality and dynamic user experiences.",
-    },
-
-    {
       title: "React.js",
       icon: "widgets",
       desc: "Developing scalable component-based frontend applications.",
@@ -50,9 +32,15 @@ export default function Skills() {
     },
 
     {
-      title: "Tailwind CSS",
-      icon: "palette",
-      desc: "Designing fast and clean interfaces using utility-first CSS.",
+      title: "TypeScript",
+      icon: "code_blocks",
+      desc: "Writing type-safe, maintainable and scalable application code.",
+    },
+
+    {
+      title: "Express.js",
+      icon: "dns",
+      desc: "Building fast and minimal REST APIs and backend services.",
     },
 
     {
@@ -62,9 +50,33 @@ export default function Skills() {
     },
 
     {
+      title: "Tailwind CSS",
+      icon: "palette",
+      desc: "Designing fast and clean interfaces using utility-first CSS.",
+    },
+
+    {
       title: "UI Libraries",
       icon: "extension",
       desc: "Crafting premium interfaces with HeroUI and DaisyUI components.",
+    },
+
+    {
+      title: "JavaScript",
+      icon: "bolt",
+      desc: "Adding interactive functionality and dynamic user experiences.",
+    },
+
+    {
+      title: "CSS3",
+      icon: "brush",
+      desc: "Creating responsive layouts with modern styling and animations.",
+    },
+
+    {
+      title: "HTML5",
+      icon: "code",
+      desc: "Building semantic, accessible and SEO-friendly website structures.",
     },
   ];
 

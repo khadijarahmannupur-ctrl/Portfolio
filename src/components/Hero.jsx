@@ -149,7 +149,7 @@ export default function Hero() {
 
               {/* RESUME BUTTON */}
               <motion.a
-                href="https://docs.google.com/document/d/1URM0oNOCwH2-_xYRD9a6izlvlmaN-moQdoENOiSleYM/view"
+                href="https://drive.google.com/file/d/1XsPsL3zre63_yPNCyJvZ_PwHN684JuX6/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ x: 8 }}

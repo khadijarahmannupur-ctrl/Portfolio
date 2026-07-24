@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Experience() {
+export default function Education() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -72,7 +72,7 @@ export default function Experience() {
 
             {/* Heading */}
             <h2 className="font-display text-[64px] text-sage-dark leading-none tracking-tighter mb-16">
-              Experience &amp;
+              Education &amp;
               <br />
               Formation
             </h2>
